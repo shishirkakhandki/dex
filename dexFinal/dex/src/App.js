@@ -7,7 +7,7 @@ import { useConnect, useAccount } from "wagmi";
 import { MetaMaskConnector } from "wagmi/connectors/metaMask";
 
 function App() {
-  const { address, isConnected } = useAccount();
+  const { address, isConnected } = useAccount(); // wagmi hook for accessing account data and connection status
   const { connect } = useConnect({
     connector: new MetaMaskConnector(),
   });
